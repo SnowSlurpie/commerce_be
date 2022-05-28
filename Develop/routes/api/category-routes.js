@@ -7,7 +7,8 @@ router.get('/', (req, res) => {
   // find all categories
   // be sure to include its associated Products
   Category.findAll({include: [Product]})
-  .then(respData => res.status(200).json(respData)) .catch (err => res.status(400).json(err))
+  .then(respData => res.status(200).json(respData)) 
+  .catch (err => res.status(400).json(err))
 });
 
 router.get('/:id', (req, res) => {
